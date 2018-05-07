@@ -1,0 +1,13 @@
+alias o=xdg-open
+
+alias cd..='cd ..'
+alias ll='ls -l'
+alias la='ls -lA'
+
+alias gdt='git difftool -y'
+alias gits='git status -su'
+alias gitshow='git show --pretty="" --name-only'
+alias gc='git commit'
+alias gcm='git commit -m'
+alias gco='git checkout'
+
