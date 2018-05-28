@@ -31,7 +31,13 @@ noremap <leader>w <C-W>
 call plug#begin()
 Plug 'wincent/command-t'
 Plug 'Valloric/YouCompleteMe'
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
 call plug#end()
+
+
+" disable markdown folding
+let g:vim_markdown_folding_disabled = 1
 
 
 " youCompleteMe config
