@@ -32,8 +32,10 @@ setGitVar() {
   git="git --git-dir=$gitdir --work-tree=$dir"
 }
 
-fetchAll() {
-  $git fetch --all > /dev/null
+fetch() {
+  if [ -z "$(git remote)" ]; then
+      $git fetch > /dev/null
+  fi
 }
 
 printRepoInfo() {
@@ -62,7 +64,7 @@ do
   gitdir=$dir".git"
   if [ -d $gitdir ]; then
     setGitVar
-    fetchAll
+    fetch
     printRepoInfo
   else
     subDirs=$dir"*/"
@@ -71,7 +73,7 @@ do
       dir=$f2
       gitdir=$dir".git"
       setGitVar
-      fetchAll
+      fetch
       printRepoInfo
     done
   fi
