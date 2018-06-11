@@ -24,7 +24,7 @@ set noshowmode
 " key mappings
 let mapleader = ","
 map <leader>s :split <CR>
-noremap <leader>w <C-W>
+noremap <leader>w :w <CR>
 
 
 " plugins
