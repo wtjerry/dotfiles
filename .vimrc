@@ -33,6 +33,7 @@ Plug 'wincent/command-t'
 Plug 'Valloric/YouCompleteMe'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
+Plug 'chriskempson/base16-vim'
 call plug#end()
 
 
@@ -43,3 +44,10 @@ let g:vim_markdown_folding_disabled = 1
 " youCompleteMe config
 let g:ycm_python_binary_path = '/usr/bin/python3'
 let g:ycm_autoclose_preview_window_after_completion = 1
+
+
+" set base16 theme
+if filereadable(expand("~/.vimrc_background"))
+    let base16colorspace=256
+    source ~/.vimrc_background
+endif
