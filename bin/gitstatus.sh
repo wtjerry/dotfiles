@@ -1,80 +1,81 @@
-#!/bin/sh
+#!/bin/bash
 
-basepath=~/coding/git/
+check_if_remote_specified=$1
 
-gitStatus() {
-  $git status -su
+all_basepaths=($HOME/coding/git/ $HOME/ctf/)
+max_depth=4
+direct_repo_paths=($HOME/)
+
+
+git_status() { git status -su ; }
+
+git_branch_status() { git status -sb | head -n 1 | cut -d' ' -f 3- ; }
+
+git_current_branch() { git branch | grep "^* " | cut -d' ' -f 2 ; }
+
+has_remote() { if [ -z "$(git remote)" ]; then return 1; fi ; }
+
+is_not_on_master() { if [ "$(git_current_branch)" = "master" ]; then return 1; fi ; }
+
+fetch_if_remote() { if has_remote ; then git fetch > /dev/null; fi ; }
+
+check_for_master_branch_or_warn() { if is_not_on_master ; then echo "*** not on master branch ***"; fi ; }
+
+check_for_remote_or_warn() { if ! has_remote ; then echo "*** no remote configured ***"; fi ; }
+
+anything_to_report() {
+    if [ "$(git_status)" ] || \
+       [ "$(git_branch_status)" ] || \
+       is_not_on_master ; then
+        return 0
+    elif [ -n "$check_if_remote_specified" ] && ! has_remote ; then
+        return 0 
+    else
+        return 1
+    fi
 }
 
-gitBranchStatus() {
-  $git status -sb | head -n 1 | cut -d' ' -f 3-
+try_print_dir() {
+    local gitdir=$dir".git"
+    if [ -d "$gitdir" ]; then
+        cd "$dir"
+        if anything_to_report ; then
+            echo "$dir"
+            check_for_master_branch_or_warn
+            check_for_remote_or_warn
+            fetch_if_remote
+            git_branch_status
+            git_status
+            echo
+        fi
+    else
+        return 1
+    fi
 }
 
-gitCurrentBranch() {
-  $git branch | grep "* " | cut -d' ' -f 2
-}
-
-printStatus() {
-  s=$(gitStatus)
-  if [ "$s" ]; then
-    gitStatus
-  fi
-}
-
-printBranchStatus() {
-  s=$(gitBranchStatus)
-  if [ "$s" ]; then
-    echo "$s"
-  fi
-}
-
-setGitVar() {
-  git="git --git-dir=$gitdir --work-tree=$dir"
-}
-
-fetch() {
-  if [ -z "$(git remote)" ]; then
-      $git fetch > /dev/null
-  fi
-}
-
-printRepoInfo() {
-  case $(gitCurrentBranch) in 
-    *master*)
-      if [ "$(gitStatus)" -o "$(gitBranchStatus)" ]; then
-        echo $dir
-        printBranchStatus
-        printStatus
-        echo
+recursive_try_print_dir() {
+    local dirs=$dir"*/"
+    for dir in $dirs; do
+      if ! try_print_dir ; then
+          if [ "$1" -lt $max_depth ]; then
+              recursive_try_print_dir $(($1 + 1))
+          fi
       fi
-    ;;
-    *)
-      echo $dir
-      echo "*** not on master branch ***"
-      printStatus
-      echo
-    ;;
-  esac
+    done
 }
 
-dirs=$basepath"*/" 
-for f in $dirs 
-do
-  dir=$f
-  gitdir=$dir".git"
-  if [ -d $gitdir ]; then
-    setGitVar
-    fetch
-    printRepoInfo
-  else
-    subDirs=$dir"*/"
-    for f2 in $subDirs 
-    do
-      dir=$f2
-      gitdir=$dir".git"
-      setGitVar
-      fetch
-      printRepoInfo
+main() {
+    # print info for all $direct_repo_paths
+    for dir in "${direct_repo_paths[@]}"; do
+        try_print_dir
     done
-  fi
-done
+
+    # print info for all $all_basepaths
+    for dir in "${all_basepaths[@]}"; do
+        recursive_try_print_dir 0
+    done
+}
+
+prev_working_dir=$(pwd)
+main
+cd "$prev_working_dir"
