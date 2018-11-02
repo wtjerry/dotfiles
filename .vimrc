@@ -51,3 +51,5 @@ if filereadable(expand("~/.vimrc_background"))
     let base16colorspace=256
     source ~/.vimrc_background
 endif
+" change Visual mode highlighting behaviour to make it actually visible
+:highlight Visual cterm=reverse ctermbg=NONE
