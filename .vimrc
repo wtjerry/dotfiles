@@ -25,6 +25,7 @@ set noshowmode
 let mapleader = ","
 map <leader>s :split <CR>
 noremap <leader>w :w <CR>
+noremap <leader><Esc> :let @/ = "" <CR>
 
 
 " plugins
