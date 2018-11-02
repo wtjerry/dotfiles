@@ -11,7 +11,7 @@ unsetopt appendhistory autocd beep notify
 bindkey -v
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
-zstyle :compinstall filename '/home/jerry/.zshrc'
+zstyle :compinstall filename $HOME'/.zshrc'
 
 autoload -Uz compinit
 compinit
@@ -20,7 +20,7 @@ compinit
 
 
 # aliases
-source .aliases
+source $HOME/.aliases
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
@@ -88,5 +88,5 @@ source ~/coding/git/z/z.sh
 
 
 # added by travis gem
-[ -f /home/jerry/.travis/travis.sh ] && source /home/jerry/.travis/travis.sh
+[ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
 

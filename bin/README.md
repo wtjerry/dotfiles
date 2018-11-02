@@ -1,20 +1,20 @@
 Example output of gitstatus.sh:
 
 ```sh
-/home/jerry/coding/git/Android-CleanArchitecture/
+<your-home>/coding/git/Android-CleanArchitecture/
 *** not on master branch ***
 
-/home/jerry/coding/git/beautifyMusic/
+<your-home>/coding/git/beautifyMusic/
 [ahead 1]
 ?? b
 
-/home/jerry/coding/git/opencv/
+<your-home>/coding/git/opencv/
 *** not on master branch ***
 
-/home/jerry/coding/git/opencv_contrib/
+<your-home>/coding/git/opencv_contrib/
 *** not on master branch ***
 
-/home/jerry/coding/git/pren/Richi-Bahn/
+<your-home>/coding/git/pren/Richi-Bahn/
 [ahead 1]
 ```
 
