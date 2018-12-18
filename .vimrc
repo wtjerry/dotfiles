@@ -38,8 +38,13 @@ Plug 'chriskempson/base16-vim'
 call plug#end()
 
 
-" disable markdown folding
-let g:vim_markdown_folding_disabled = 1
+" folding:
+" folding level 0: zM
+" substract level: zm
+" folding level max: zR
+" add level: zr
+" open fold: zo
+" close fold zc
 
 
 " youCompleteMe config
