@@ -5,6 +5,11 @@
   inactive_color_offset = 0.61
   window_state = maximise
 [keybindings]
+  go_down = <Alt>j
+  go_left = <Alt>h
+  go_right = <Alt>l
+  go_up = <Alt>k
+  layout_launcher = F10
 [layouts]
   [[default]]
     [[[child1]]]
