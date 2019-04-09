@@ -15,7 +15,7 @@ In the future they may be automated. (famous last words of a programmer)
     zplug install 
     ```
 
-2. Change to your prefered theme (my choice: material-darker)
+2. Change to your prefered theme (my choice: solarflare)
     ```
     base16_<your-prefered-theme>
     ```
@@ -28,4 +28,5 @@ In the future they may be automated. (famous last words of a programmer)
 
 2. Adapt the theme if required. If you chose material-darker you may want to change color08 / Bright Black to "90/90/90" to make comments etc more visible. File to adapt: $HOME/.config/base16-shell/scripts/base16-<your-prefered-theme>.sh
 
-
+## meld
+1. If you choose a dark system theme you may have to change meld to a dark color scheme aswell (my chose: Solarized-Dark)
