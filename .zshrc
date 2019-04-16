@@ -32,7 +32,7 @@ alias egrep='egrep --color=auto'
 source ~/.zplug/init.zsh
 zplug "geometry-zsh/geometry"
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
-zplug "zdharma/zsh-diff-so-fancy", as:command, use:bin/git-dsf
+zplug "zdharma/zsh-diff-so-fancy"
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
   printf "Install? [y/N]: "
