@@ -17,7 +17,11 @@ POWERLINE_BASH_SELECT=1
 # virtualenv and virtualenvwrapper
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 export WORKON_HOME=$HOME/.virtualenvs
-source /usr/local/bin/virtualenvwrapper.sh
+if [ -x /usr/local/bin/virtualenvwrapper.sh ]; then
+    source /usr/local/bin/virtualenvwrapper.sh
+else
+    source /usr/bin/virtualenvwrapper.sh
+fi
 
 
 # go paths
