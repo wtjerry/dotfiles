@@ -12,3 +12,4 @@ alias gc='git commit'
 alias gcm='git commit -m'
 alias gco='git checkout'
 
+alias vi=vim
