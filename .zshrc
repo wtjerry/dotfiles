@@ -33,6 +33,7 @@ source ~/.zplug/init.zsh
 zplug "geometry-zsh/geometry"
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 zplug "zdharma/zsh-diff-so-fancy"
+zplug "agkozak/zsh-z"
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
   printf "Install? [y/N]: "
