@@ -138,9 +138,6 @@ fi
 
 
 
-# when terminator gets started, disable scrollbar
-xdotool key ctrl+shift+S
-
 # set colors for man pages
 export LESS_TERMCAP_mb=$'\E[1;31m'     # begin bold
 export LESS_TERMCAP_md=$'\E[1;36m'     # begin blink
