@@ -9,13 +9,22 @@ git clone <this-repo> .
 The following steps are necessary to make certain tools work as intended.
 In the future they may be automated. (famous last words of a programmer)
 
+## clone base16
+    ```
+    git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
+    ```
+
 ## zsh
-1. Install all zsh plugins if this was not already done automatically
+1. Clone zplug
+    ```
+    git clone https://github.com/zplug/zplug .zplug
+    ```
+2. Install all zsh plugins if this was not already done automatically
     ``` 
     zplug install 
     ```
 
-2. Change to your prefered theme (my choice: solarflare)
+3. Change to your prefered theme (my choice: solarflare)
     ```
     base16_<your-prefered-theme>
     ```
