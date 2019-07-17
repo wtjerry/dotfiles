@@ -1,20 +1,23 @@
-# Installation
+# dot files
+This project contains a collection of configuration files to setup a Linux system to my liking.
+Altough it may also work for other systems, these configurations are only tested on Debian and Arch Linux.
+
+## Usage
 In your $HOME do 
 ```sh 
 git clone <this-repo> . 
 ```
 
-
-# Necessary manual steps
+## Necessary manual steps
 The following steps are necessary to make certain tools work as intended.
 In the future they may be automated. (famous last words of a programmer)
 
-## clone base16
+### clone base16
     ```
     git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
     ```
 
-## zsh
+### zsh
 1. Clone zplug
     ```
     git clone https://github.com/zplug/zplug .zplug
@@ -29,7 +32,7 @@ In the future they may be automated. (famous last words of a programmer)
     base16_<your-prefered-theme>
     ```
 
-## vim
+### vim
 1. Install all vim plugins
     ``` 
     :PlugInstall 
@@ -37,5 +40,11 @@ In the future they may be automated. (famous last words of a programmer)
 
 2. Adapt the theme if required. If you chose material-darker you may want to change color08 / Bright Black to "90/90/90" to make comments etc more visible. File to adapt: $HOME/.config/base16-shell/scripts/base16-<your-prefered-theme>.sh
 
-## meld
+### meld
 1. If you choose a dark system theme you may have to change meld to a dark color scheme aswell (my chose: Solarized-Dark)
+
+## Contributing
+Feel free to create a pull request.
+
+## License
+This project is released under the GPLv3 license.
