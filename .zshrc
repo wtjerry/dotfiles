@@ -79,7 +79,7 @@ export PATH=$PATH:~/.local/bin
 
 
 # configure markdownviewer theme
-export MDV_THEME=528.9419
+export MDV_THEME=884.0134
 
 
 
