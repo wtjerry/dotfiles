@@ -47,6 +47,12 @@ call plug#end()
 " close fold zc
 
 
+" copy & pase from to system clipboard
+" the system clipboard register is "+
+" using "+y while having text selected in visual mode puts the text into the clipboard
+" using "+p pastes the clipboard into vim
+
+
 " youCompleteMe config
 let g:ycm_python_binary_path = '/usr/bin/python3'
 let g:ycm_autoclose_preview_window_after_completion = 1
@@ -57,5 +63,7 @@ if filereadable(expand("~/.vimrc_background"))
     let base16colorspace=256
     source ~/.vimrc_background
 endif
+
+
 " change Visual mode highlighting behaviour to make it actually visible
 :highlight Visual cterm=reverse ctermbg=NONE
