@@ -33,8 +33,7 @@
                     "maxNumberOfProblems": 10,
                     "completionSnippetsOn": true
                 }
-            },
-            "trace.server": "verbose"
+            }
         }
     }
 }
