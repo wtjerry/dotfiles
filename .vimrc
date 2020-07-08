@@ -14,11 +14,11 @@ set ignorecase
 
 
 " powerline config
-set rtp+=/usr/share/powerline/bindings/vim
-set encoding=utf-8
-set t_Co=256
-set laststatus=2
-set noshowmode
+" set rtp+=/usr/share/powerline/bindings/vim
+" set encoding=utf-8
+" set t_Co=256
+" set laststatus=2
+" set noshowmode
 
 
 " key mappings
@@ -31,10 +31,10 @@ noremap <leader><Esc> :let @/ = "" <CR>
 " plugins
 call plug#begin()
 Plug 'wincent/command-t'
-Plug 'Valloric/YouCompleteMe'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 Plug 'chriskempson/base16-vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 
@@ -53,9 +53,8 @@ call plug#end()
 " using "+p pastes the clipboard into vim
 
 
-" youCompleteMe config
-let g:ycm_python_binary_path = '/usr/bin/python3'
-let g:ycm_autoclose_preview_window_after_completion = 1
+" coc.vim confie
+source ~/.vimrc_coc
 
 
 " set base16 theme

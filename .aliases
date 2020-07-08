@@ -14,3 +14,5 @@ alias gco='git checkout'
 
 alias vi=vim
 alias view='vim -R'
+
+alias nvim='~/programs/nvim.appimage'

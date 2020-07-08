@@ -95,3 +95,9 @@ source ~/coding/git/z/z.sh
 
 # configure less to handle ASCI ESC characters
 export LESS=r$LESS
+
+
+
+# haskell
+[ -f "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env" ] && source "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env"
+
