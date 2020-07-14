@@ -30,7 +30,8 @@ noremap <leader><Esc> :let @/ = "" <CR>
 
 " plugins
 call plug#begin()
-Plug 'wincent/command-t'
+" Plug 'wincent/command-t'
+Plug 'kien/ctrlp.vim'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 Plug 'chriskempson/base16-vim'
@@ -55,6 +56,14 @@ call plug#end()
 
 " coc.vim confie
 source ~/.vimrc_coc
+
+
+" ctrlp.vim for neovim
+" search dir either where .git or otherwise dir of file
+let g:ctrlp_working_path_mode = 'ra'
+nnoremap <Leader>o :CtrlP<CR>
+nnoremap <Leader>f :CtrlPMRUFiles<CR>
+
 
 
 " set base16 theme
