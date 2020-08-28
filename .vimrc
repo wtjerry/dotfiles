@@ -33,7 +33,7 @@ call plug#begin()
 " Plug 'wincent/command-t'
 Plug 'kien/ctrlp.vim'
 Plug 'godlygeek/tabular'
-Plug 'plasticboy/vim-markdown'
+"Plug 'plasticboy/vim-markdown'
 Plug 'chriskempson/base16-vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
