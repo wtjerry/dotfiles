@@ -71,19 +71,11 @@ Either use a version of vi compiled with the flags that supports the inline wind
 | :delm a       | delete mark a |
 
 ### haskell neovim integration
-download and chmod nvim.appimage from https://github.com/neovim/neovim/releases/ to wherever the alias in .aliases is configured.
 
-Install ghcup as described on https://www.haskell.org/ghcup/
-
-Install the haskell-language server
-    ```
-    git clone https://github.com/haskell/haskell-language-server --recurse-submodules
-    cd haskell-language-server
-    stack install (and make sure ~/.local/bin is on your $PATH)
-    ```
-It's important that ghcide is compiled with the same compiler you use to build your projects.
-
-in vim do ```:CocInstall coc-json```
+1. make sure you have ghcup installed (https://www.haskell.org/ghcup/)
+2. install nodejs
+3. install npm/yarn
+4. in vim do ```:CocInstall coc-json```
 
 
 ### meld
