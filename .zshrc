@@ -53,12 +53,6 @@ BASE16_SHELL=$HOME/.config/base16-shell/
 
 
 
-# virtualenv and virtualenvwrapper
-export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
-export WORKON_HOME=$HOME/.virtualenvs
-source /usr/local/bin/virtualenvwrapper.sh
-
-
 
 # go paths
 export GOROOT=/usr/lib/go-1.8

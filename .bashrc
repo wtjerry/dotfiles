@@ -7,22 +7,6 @@
 JAVA_HOME="/usr/bin/java"
 
 
-# powerline config
-powerline-daemon -q
-POWERLINE_BASH_CONTINUATION=1
-POWERLINE_BASH_SELECT=1
-. /usr/share/powerline/bindings/bash/powerline.sh
-
-
-# virtualenv and virtualenvwrapper
-export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
-export WORKON_HOME=$HOME/.virtualenvs
-if [ -x /usr/local/bin/virtualenvwrapper.sh ]; then
-    source /usr/local/bin/virtualenvwrapper.sh
-else
-    source /usr/bin/virtualenvwrapper.sh
-fi
-
 
 # go paths
 export GOROOT=/usr/lib/go-1.8
