@@ -77,11 +77,6 @@ export MDV_THEME=884.0134
 
 
 
-# sourcing z for jumping around
-source ~/coding/git/z/z.sh
-
-
-
 # added by travis gem
 [ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
 
