@@ -38,12 +38,14 @@ To disable that behaviour you may choose the layout ".. no dead keys".
     ```
 
 ### vim
-1. Install all vim plugins
+Either use a version of vi compiled with the flags that supports the inline windows coc uses (nox vim) or use neovim.
+1. download https://github.com/junegunn/vim-plug and copy it to either ~/.vim/autoload (normal vim) or ~/.config/nvim/autload
+2. Install all vim plugins
     ``` 
     :PlugInstall 
     ```
 
-2. Adapt the theme if required. If you chose material-darker you may want to change color08 / Bright Black to "90/90/90" to make comments etc more visible. File to adapt: $HOME/.config/base16-shell/scripts/base16-<your-prefered-theme>.sh
+3. Adapt the theme if required. If you chose material-darker you may want to change color08 / Bright Black to "90/90/90" to make comments etc more visible. File to adapt: $HOME/.config/base16-shell/scripts/base16- <your-prefered-theme> .sh
 
 #### vim cheatsheet
 | char(s)       | effect |
@@ -85,7 +87,7 @@ in vim do ```:CocInstall coc-json```
 
 
 ### meld
-1. If you choose a dark system theme you may have to change meld to a dark color scheme aswell (my chose: Solarized-Dark)
+1. If you choose a dark system theme you may have to change meld to a dark color scheme aswell (my choice: Solarized-Dark)
 
 ## Contributing
 Feel free to create a pull request.
