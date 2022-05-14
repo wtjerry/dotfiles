@@ -1,4 +1,5 @@
 {
     "files.autoSave": "onWindowChange",
-    "telemetry.telemetryLevel": "off"
+    "telemetry.telemetryLevel": "off",
+    "haskell.manageHLS": "GHCup"
 }
