@@ -95,3 +95,7 @@ export LESS=r$LESS
 # use gpg key for ssh authentication
 export GPG_TTY="$(tty)"
 export SSH_AUTH_SOCK="/run/user/$UID/gnupg/S.gpg-agent.ssh"
+
+
+
+DOTNET_CLI_TELEMETRY_OPTOUT=1
