@@ -34,6 +34,7 @@ zplug "geometry-zsh/geometry"
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 zplug "zdharma-continuum/zsh-diff-so-fancy"
 zplug "agkozak/zsh-z"
+zplug "chriskempson/base16-shell"
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
   printf "Install? [y/N]: "
@@ -44,13 +45,6 @@ fi
                     
 # Then, source plugins and add commands to $PATH
 zplug load
-
-
-
-# BASE16 init 
-BASE16_SHELL=$HOME/.config/base16-shell/
-[ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
-
 
 
 
