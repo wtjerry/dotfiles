@@ -65,6 +65,7 @@ ReadTags    = no
 # to quickly go to this directory with the '-m' parameter or the 'm' command.
 # This can also point to a playlist.
 #MusicDir      = "$HOME/Music"
+MusicDir      = "/run/user/1000/gvfs/smb-share:server=torhild.local,share=stuff/music"
 
 # How to sort? FileName is the only option for now.
 Sort        = FileName
