@@ -48,27 +48,35 @@ Either use a version of vi compiled with the flags that supports the inline wind
 3. Adapt the theme if required. If you chose material-darker you may want to change color08 / Bright Black to "90/90/90" to make comments etc more visible. File to adapt: $HOME/.config/base16-shell/scripts/base16- <your-prefered-theme> .sh
 
 #### vim cheatsheet
-| char(s)       | effect |
-|---------------|--------|
-| %             | find the next item in this line after or under the cursor and jump to its match. |
-| C             | like d$a, delete to end of like then insert |
-| 10j           | move 10 lines down
-| 10G           | goto line 10 |
-| CTRL-w j      | switch window to down (like hjkl)
-| * OR #        | while * is select word and go to next one, # is backwards |
-| CTRL-y OR     | scroll screen 1 line up / down |
-| CTRL-e        | |
-| "+y           | yank selected text to system register (available to CTRL-V) |
-| gt OR gT      | change tab |
-| ,o            | open file search (Plugin) |
-| CTRL-t        | open selection from search in new tab |
-| :tab help     | open help in other tab |
-| / OR ?        | search forward or backwards. n and N repeat forward backwards |
-| m[a-z]        | mark a position within a file |
-| m[A-Z]        | mark a position globally |
-| '             | jump to beginning of line of mark |
-| ```` (1x)     | jump to mark |
-| :delm a       | delete mark a |
+| char(s)            | effect |
+|--------------------|--------|
+| %                  | find the next item in this line after or under the cursor and jump to its match. |
+| C                  | like d$a, delete to end of like then insert |
+| 10j                | move 10 lines down
+| 10G                | goto line 10 |
+| CTRL-w j           | switch window to down (like hjkl)
+| * OR #             | while * is select word and go to next one, # is backwards |
+| CTRL-y OR          | scroll screen 1 line up / down |
+| CTRL-e             | |
+| "+y                | yank selected text to system register (available to CTRL-V) |
+| gt OR gT           | change tab |
+| ,o                 | open file search (Plugin) |
+| CTRL-t             | open selection from search in new tab |
+| :tab help          | open help in other tab |
+| / OR ?             | search forward or backwards. n and N repeat forward backwards |
+| m[a-z]             | mark a position within a file |
+| m[A-Z]             | mark a position globally |
+| :%s/text/replace/g | %s all, g global |
+| :%s/text/t2/gc     | c: confirm |
+| :%s/.*text.*\n//g  | vim knows wildcards |
+| :g/text/d          | d: delete |
+| :%s vs :s          | %: whole buffer, s: next match |
+| :%! command        | replace buffer with output of shell command |
+| :%! clip.exe       | a (bad) way of copy to clipboard on windows |
+| :%! grep ABC       | opposite of :g/ABC/d |
+| '                  | jump to beginning of line of mark |
+| ```` (1x)          | jump to mark |
+| :delm a            | delete mark a |
 
 ### haskell neovim integration
 
