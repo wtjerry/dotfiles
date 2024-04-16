@@ -11,22 +11,26 @@ git_status() { git status -su ; }
 
 git_branch_status() { git status -sb | head -n 1 | cut -d' ' -f 3- ; }
 
-git_current_branch() { git branch | grep "^* " | cut -d' ' -f 2 ; }
+git_current_branch() { git branch --show-current ; }
 
 has_remote() { if [ -z "$(git remote)" ]; then return 1; fi ; }
 
-is_not_on_master() { if [ "$(git_current_branch)" = "master" ]; then return 1; fi ; }
+is_not_on_main() { 
+    if [ "$(git_current_branch)" = "main" ] || [ "$(git_current_branch)" = "master" ];
+        then return 1;
+    fi ;
+}
 
 fetch_if_remote() { if has_remote ; then git fetch > /dev/null; fi ; }
 
-check_for_master_branch_or_warn() { if is_not_on_master ; then echo "*** not on master branch ***"; fi ; }
+check_for_main_branch_or_warn() { if is_not_on_main; then echo "*** not on main/master branch ***"; fi ; }
 
 check_for_remote_or_warn() { if ! has_remote ; then echo "*** no remote configured ***"; fi ; }
 
 anything_to_report() {
     if [ "$(git_status)" ] || \
        [ "$(git_branch_status)" ] || \
-       is_not_on_master ; then
+       is_not_on_main; then
         return 0
     elif [ -n "$check_if_remote_specified" ] && ! has_remote ; then
         return 0 
@@ -41,7 +45,7 @@ try_print_dir() {
         cd "$dir"
         if anything_to_report ; then
             echo "$dir"
-            check_for_master_branch_or_warn
+            check_for_main_branch_or_warn
             check_for_remote_or_warn
             fetch_if_remote
             git_branch_status
