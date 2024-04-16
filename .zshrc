@@ -92,3 +92,9 @@ export SSH_AUTH_SOCK="/run/user/$UID/gnupg/S.gpg-agent.ssh"
 
 
 DOTNET_CLI_TELEMETRY_OPTOUT=1
+
+
+
+dsf() {
+  diff -u $1 $2 | diff-so-fancy
+}
