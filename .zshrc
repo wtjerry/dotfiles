@@ -21,10 +21,9 @@ compinit
 
 # aliases
 source $HOME/.aliases
-alias ls='ls --color=auto'
-alias grep='grep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias egrep='egrep --color=auto'
+if [ -f "$HOME/.system_specific_aliases" ]; then
+  source "$HOME/.system_specific_aliases"
+fi
 
 
 
