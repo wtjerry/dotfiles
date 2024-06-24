@@ -23,4 +23,3 @@ alias view='vim -R'
 
 alias nvim='~/programs/nvim.appimage'
 
-alias docker=podman
