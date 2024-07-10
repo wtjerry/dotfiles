@@ -14,9 +14,6 @@ alias egrep='egrep --color=auto'
 alias gdt='git difftool -y'
 alias gits='git status -su'
 alias gitshow='git show --pretty="" --name-only'
-alias gc='git commit'
-alias gcm='git commit -m'
-alias gcob='git checkout -b'
 
 alias vi=vim
 alias view='vim -R'
