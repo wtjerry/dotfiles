@@ -20,3 +20,7 @@ alias view='vim -R'
 
 alias nvim='~/programs/nvim.appimage'
 
+if [ -f ~/.system_specific_aliases ]; then
+    . ~/.system_specific_aliases
+fi
+

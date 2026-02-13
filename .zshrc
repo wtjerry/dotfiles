@@ -20,12 +20,9 @@ compinit
 setopt INTERACTIVE_COMMENTS
 
 
-# aliases
-source $HOME/.aliases
-if [ -f "$HOME/.system_specific_aliases" ]; then
-  source "$HOME/.system_specific_aliases"
+if [ -f ~/.aliases ]; then
+    . ~/.aliases
 fi
-
 
 
 # zplug init & plugins
