@@ -15,7 +15,6 @@
     icon_bell = False
     background_darkness = 0.0
     cursor_blink = False
-    cursor_color = "#e6892e"
     font = Monospace 11.5
     foreground_color = "#e6892e"
     show_titlebar = False
@@ -26,12 +25,10 @@
   [[New Profile]]
     icon_bell = False
     cursor_blink = False
-    cursor_color = "#aaaaaa"
     use_theme_colors = True
   [[light_blue]]
     icon_bell = False
     cursor_blink = False
-    cursor_color = "#1fd1e6"
     font = Monospace 11.5
     show_titlebar = False
     palette = "#000000:#aa0000:#00aa00:#aa5500:#0000aa:#aa00aa:#00aaaa:#aaaaaa:#555555:#ff5555:#55ff55:#ffff55:#5555ff:#ff55ff:#55ffff:#ffffff"
