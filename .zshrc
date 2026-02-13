@@ -17,6 +17,7 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
+setopt INTERACTIVE_COMMENTS
 
 
 # aliases
@@ -44,6 +45,9 @@ fi
                     
 # Then, source plugins and add commands to $PATH
 zplug load
+
+# base16-solarized has comment characters the same color as the background, fix that:
+ZSH_HIGHLIGHT_STYLES[comment]='fg=8'
 
 
 
