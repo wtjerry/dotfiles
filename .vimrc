@@ -75,3 +75,6 @@ endif
 
 " change Visual mode highlighting behaviour to make it actually visible
 :highlight Visual cterm=reverse ctermbg=NONE
+
+
+set shell=zsh
