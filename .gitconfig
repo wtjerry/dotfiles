@@ -3,9 +3,10 @@
     email = wtjerry123@gmail.com
 
 [alias]
-    lgbase = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' -n 30
+    lgbase = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%C(reset)' -n 30
     lgbranches = !"git lgbase --branches"
     lgall = !"git lgbase --all"
+    lgvagrant = !"git lgbase --remotes=vagrant_claude"
     lgfirst = !"git lgbase --all --first-parent"
     lg = !"git lgbranches"
     aa = add --all
