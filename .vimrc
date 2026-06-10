@@ -27,6 +27,10 @@ map <leader>s :split <CR>
 noremap <leader>w :w <CR>
 noremap <leader><Esc> :let @/ = "" <CR>
 
+" prevent bad habit of quitting all buffers instead of saving/closing just 1 buffer
+nnoremap ZZ :echohl WarningMsg \| echo "ZZ disabled, use <leader>w then and bd / buffers in general" \| echohl None<CR>
+nnoremap ZQ :echohl WarningMsg \| echo "ZZ disabled, use <leader>w then and bd / buffers in general" \| echohl None<CR>
+
 
 " plugins
 call plug#begin()
@@ -75,6 +79,9 @@ endif
 
 " change Visual mode highlighting behaviour to make it actually visible
 :highlight Visual cterm=reverse ctermbg=NONE
+
+" set CTRL+P 'base'-dir to cwd of vi
+let g:ctrlp_working_path_mode = ''
 
 
 set shell=zsh

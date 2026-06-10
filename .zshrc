@@ -20,6 +20,9 @@ compinit
 setopt INTERACTIVE_COMMENTS
 
 
+setopt CHECK_JOBS # checks jobs which are stopped, eg suspended with CTRL-Z
+setopt CHECK_RUNNING_JOBS # checks jobs are still running, like one put into bg or using "&"
+
 if [ -f ~/.aliases ]; then
     . ~/.aliases
 fi
